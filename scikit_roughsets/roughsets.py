@@ -7,6 +7,8 @@ class RoughSetsReducer:
 
     '''
     Calculates indiscernibility relation
+    a is the attribute (B subset of A) 
+    X is the information system
     '''
     def indisc(self, a, x):
 
@@ -50,6 +52,10 @@ class RoughSetsReducer:
 
     '''
     Calculates lower approximation set of y
+    T is the information system (Universe)
+    a is the attribute (B subset of A)
+    and y is the X 
+    we're calculating the a-approximation of y in the T Universe
     '''
     def rslower(self, y, a, T):
         z = self.indisc(a, T)
