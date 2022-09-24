@@ -53,7 +53,7 @@ class RoughSetsReducer:
     '''
     Calculates lower approximation set of y
     T is the information system (Universe)
-    a is the attribute (B subset of A)
+    a is the attribute (B subset of A) : an np.array that contains the NUMBER of the attributes needed 
     and y is the X 
     we're calculating the a-approximation of y in the T Universe
     '''
