@@ -65,7 +65,7 @@ class RoughSetsReducer:
             zz = np.setdiff1d(z[u, :], 0)
             if np.in1d(zz, y).all():
                 w = np.hstack((w, zz))
-        return w.astype(dtype=int)
+        return np.array(w).astype(dtype=int)
 
     '''
     Calculates upper approximation set of y
@@ -79,7 +79,7 @@ class RoughSetsReducer:
             zzz = np.intersect1d(zz, y)
             if len(zzz) > 0:
                 w = np.hstack((w, zz))
-        return w.astype(dtype=int)
+        return np.array(w).astype(dtype=int)
 
 
     def __pospq(self, p, q):
