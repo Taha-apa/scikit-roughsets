@@ -55,7 +55,7 @@ class RoughSetsReducer:
     T is the information system (Universe)
     a is the attribute (B subset of A) : an np.array that contains the NUMBER of the attributes needed 
     and y is the X 
-    we're calculating the a-approximation of y in the T Universe
+    we're calculating the a-lower approximation of y in the T Universe
     '''
     def rslower(self, y, a, T):
         z = self.indisc(a, T)
@@ -69,6 +69,10 @@ class RoughSetsReducer:
 
     '''
     Calculates upper approximation set of y
+    T is the information system (Universe)
+    a is the attribute (B subset of A) : an np.array that contains the NUMBER of the attributes needed 
+    and y is the X 
+    we're calculating the a-higher approximation of y in the T Universe
     '''
     def rsupper(self, y, a, T):
         z = self.indisc(a, T)
